@@ -1,0 +1,14 @@
+User
+    username
+    password
+    location
+
+
+Journal Entry
+    slug    SlugField
+    date    DateField
+    river   Chrfield
+    flow    Integer
+    description   CharFielad
+    picture     ImageField
+    public      BooleanField

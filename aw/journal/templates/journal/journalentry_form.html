@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>New Entry:</h1>
+
+
+    <form method="post">{% csrf_token %}
+        <h3>Date:</h3>
+        {{ form.date}}
+        <h3>River:</h3>
+        {{ form.river }}
+        <h3>Flow:</h3>
+        {{ form.flow }}
+        <h3>Description:</h3>
+        {{ form.description }}
+        <h4>Public:  {{ form.public }}</h4>
+        <input type="submit" value="Save">
+    </form>
+</div>
+<script>
+  $(function () {
+    $("#id_date").datepicker({
+      format:'dd/mm/yyyy',
+    });
+  });
+</script>
+{% endblock %}
